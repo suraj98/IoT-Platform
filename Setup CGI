@@ -1,0 +1,24 @@
+Firstly Download Apache2 Web server in RPI-3:
+Type below commands in terminal.
+ sudo apt-get update
+ sudo apt-get upgrade
+ sudo apt-get install apache2
+
+Secondly, Next Steps are : 
+Type below commands in terminal.
+ sudo chmod 777   /var/www/html  # Change mode
+ sudo chown -R pi /var/www       # Change owner
+ mkdir /var/www/html/cgi-bin     # make directory cgi-bin            
+ cd cgi-bin                      # change directory to cgi-bin
+ 
+ Thirdly,
+ create test.py cgi file in this directory and write cgi code.
+ 
+ Hence forth ,
+ In Terminal Type :
+            1.sudo a2enmod cgi 
+            2.sudo service apache2 restart
+ 
+ To test CGI CODE :
+ In WebBrowser Type  http://YOUR_LOCAL_IP_OF_RPI3/cgi-bin/test.py
+ 
